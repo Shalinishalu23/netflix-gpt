@@ -3,6 +3,10 @@ run "npm start"
 install tail wind
 create component/utils folders
 rafce shorthand
+Routing=> npm i -D react-router-dom,createBrowserRouter,RouterProvider
+header, login, sign up
+formik library for form validation
+
 
 Login/Sign Up
     Sign In /Sign up Form
