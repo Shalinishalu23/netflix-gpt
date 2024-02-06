@@ -1,16 +1,69 @@
 import { useRef, useState } from "react"
 import Header from "./Header"
 import { checkValidData } from "../../src/utils/validation.js"
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { auth } from "../utils/firebase";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
 
 const Login = () => {
+    const dispatch = useDispatch()
     const [isSignInForm, setIsSignInForm] = useState(true)
     const [errorMessage, setErrorMessage] = useState(true)
+    const navigate = useNavigate()
     const email = useRef(null)
     const password = useRef(null)
 
     const handleButtonClick = () => {
         const message = checkValidData(email.current.value, password.current.value)
         setErrorMessage(message)
+
+        // sign in or sign up
+        if (message) return
+
+        if (!isSignInForm) {
+            createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
+                .then((userCredential) => {
+                    // Signed up 
+                    const user = userCredential.user;
+                    console.log('user: ', user)
+                    navigate('/browse')
+                })
+                .catch((error) => {
+                    // const errorCode = error.code;
+                    const errorMessage = error.message;
+                    console.log('errorMessage: ', errorMessage);
+                    setErrorMessage(errorMessage)
+                    // ..
+                });
+        } else {
+            signInWithEmailAndPassword(auth, email.current.value, password.current.value)
+                .then((userCredential) => {
+                    // Signed in 
+                    const user = userCredential.user;
+                    console.log('user: ', user)
+                    // console.log('user: ', user.providerData[0].photoURL)
+                    //update profile
+                    // updateProfile(user, {
+                    //     displayName: "Shalu", photoURL: "https://media.licdn.com/dms/image/C5603AQEF55ed9K7Wyg/profile-displayphoto-shrink_200_200/0/1634309687036?e=1712793600&v=beta&t=hHqNsHJh_y5sqRinJBEDWxYuiCcWfhWs46SbmsQnRUE"
+                    // }).then(() => {
+                    //     // Profile updated!
+                    // const { uid, email, displayName, photoURL } = auth.currentUser;
+                    // dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }))
+                    //     navigate('/browse')
+                    // }).catch((error) => {
+                    //     setErrorMessage(error.message)
+                    // });
+                    navigate('/browse')
+                })
+                .catch((error) => {
+                    //   const errorCode = error.code;
+                    const errorMessage = error.message;
+                    console.log('errorMessage: ', errorMessage);
+                    setErrorMessage(errorMessage)
+                });
+        }
     }
     const toggleSignInForm = () => {
         setIsSignInForm(!isSignInForm)
@@ -20,12 +73,12 @@ const Login = () => {
         <div>
             <Header />
             <div className="absolute">
-                <img
-                    src="https://assets.nflxext.com/ffe/siteui/vlv3/fc164b4b-f085-44ee-bb7f-ec7df8539eff/d23a1608-7d90-4da1-93d6-bae2fe60a69b/IN-en-20230814-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="background"
-                />   
                 {/* <img
-                    src="https://static.standard.co.uk/2022/11/16/10/netflix-s.jpg?crop=8:5,smart&quality=75&auto=webp" alt="background"
+                    src="https://assets.nflxext.com/ffe/siteui/vlv3/fc164b4b-f085-44ee-bb7f-ec7df8539eff/d23a1608-7d90-4da1-93d6-bae2fe60a69b/IN-en-20230814-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="background"
                 />    */}
+                <img
+                    src="https://static.standard.co.uk/2022/11/16/10/netflix-s.jpg?crop=8:5,smart&quality=75&auto=webp" alt="background"
+                />
             </div>
             <form onSubmit={(e) => e.preventDefault()} className="w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80">
                 <h1 className="font-bold text-3xl py-4">
