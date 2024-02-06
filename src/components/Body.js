@@ -18,8 +18,6 @@ const Body = () => {
 
     return (
         <>
-        {/* <Login />
-            <Browse /> */}
             <RouterProvider router={appRouter} />
         </>
     )
