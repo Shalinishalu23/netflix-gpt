@@ -5,6 +5,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { USER_AVATAR } from "../utils/constant";
 
 const Login = () => {
     const dispatch = useDispatch()
@@ -29,7 +30,6 @@ const Login = () => {
                 .catch((error) => {
                     // const errorCode = error.code;
                     const errorMessage = error.message;
-                    console.log('errorMessage: ', errorMessage);
                     setErrorMessage(errorMessage)
                     // ..
                 });
@@ -39,16 +39,17 @@ const Login = () => {
                     // Signed in 
                     const user = userCredential.user;
                     // console.log('user: ', user.providerData[0].photoURL)
-                    //update profile
-                    // updateProfile(user, {
-                    //     displayName: "Shalu", photoURL: "https://media.licdn.com/dms/image/C5603AQEF55ed9K7Wyg/profile-displayphoto-shrink_200_200/0/1634309687036?e=1712793600&v=beta&t=hHqNsHJh_y5sqRinJBEDWxYuiCcWfhWs46SbmsQnRUE"
-                    // }).then(() => {
-                    //     // Profile updated!
-                    // const { uid, email, displayName, photoURL } = auth.currentUser;
-                    // dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }))
-                    // }).catch((error) => {
-                    //     setErrorMessage(error.message)
-                    // });
+                    // update profile
+                    updateProfile(user, {
+                        displayName: "Shalu", photoURL: USER_AVATAR
+                        // photoURL: "https://media.licdn.com/dms/image/C5603AQEF55ed9K7Wyg/profile-displayphoto-shrink_200_200/0/1634309687036?e=1712793600&v=beta&t=hHqNsHJh_y5sqRinJBEDWxYuiCcWfhWs46SbmsQnRUE"
+                    }).then(() => {
+                        // Profile updated!
+                    const { uid, email, displayName, photoURL } = auth.currentUser;
+                    dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }))
+                    }).catch((error) => {
+                        setErrorMessage(error.message)
+                    });
                 })
                 .catch((error) => {
                     //   const errorCode = error.code;
