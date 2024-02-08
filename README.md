@@ -50,3 +50,8 @@ NetflixGPT
 
     shalu.shalinigowda@gmail.com
     Shalu@2020
+
+    https://api.themoviedb.org/3/movie/top_rated
+    https://api.themoviedb.org/3/movie/popular
+    https://api.themoviedb.org/3/movie/now_playing
+    https://api.themoviedb.org/3/movie/upcoming

@@ -2,11 +2,14 @@ import Header from './Header'
 import useNowPlayingMovies from '../../src/hooks/useNowPlayingMovies.js'
 import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";
-import usePopularMovies from '../hooks/usePopularMovies';
+import useMovies from '../hooks/useMovies';
 
 const Browse = () => {
+  useMovies('top_rated')
+  useMovies('upcoming')
+  useMovies('now_playing')
+  useMovies('popular')
   useNowPlayingMovies()
-  usePopularMovies()
   return (
     <div><Header />
       {/* 
@@ -18,7 +21,7 @@ const Browse = () => {
               - cards * n
       */}
       <MainContainer />
-      <SecondaryContainer/>
+      <SecondaryContainer />
     </div>
   )
 }

@@ -45,8 +45,8 @@ const Login = () => {
                         // photoURL: "https://media.licdn.com/dms/image/C5603AQEF55ed9K7Wyg/profile-displayphoto-shrink_200_200/0/1634309687036?e=1712793600&v=beta&t=hHqNsHJh_y5sqRinJBEDWxYuiCcWfhWs46SbmsQnRUE"
                     }).then(() => {
                         // Profile updated!
-                    const { uid, email, displayName, photoURL } = auth.currentUser;
-                    dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }))
+                        const { uid, email, displayName, photoURL } = auth.currentUser;
+                        dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }))
                     }).catch((error) => {
                         setErrorMessage(error.message)
                     });
@@ -54,7 +54,6 @@ const Login = () => {
                 .catch((error) => {
                     //   const errorCode = error.code;
                     const errorMessage = error.message;
-                    console.log('errorMessage: ', errorMessage);
                     setErrorMessage(errorMessage)
                 });
         }
