@@ -13,3 +13,11 @@ export const USER_AVATAR =
   };
 
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
+
+export const BG_URL = "https://static.standard.co.uk/2022/11/16/10/netflix-s.jpg?crop=8:5,smart&quality=75&auto=webp"
+
+export const SUPPORTED_LANGUAGES = [
+  { identifier: "en", name: "English" },
+  { identifier: "hindi", name: "Hindi" },
+  { identifier: "spanish", name: "Spanish" },
+];
