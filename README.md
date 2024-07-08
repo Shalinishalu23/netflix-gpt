@@ -36,6 +36,14 @@ Made the Browse page amazing with Tailwind CSS
 Day 3(GPT)
 gpt search bar 
 multi lang ddl
+gpt login and create secrate key
+install "npm i openai"
+creat openai and add key 
+call openai in gptsearchbar
+promise.all() -1.48
+responsive -1.05
+to keep sensitive data in .env, while using 
+memoization (if already data there dont call api)
 
 
 
