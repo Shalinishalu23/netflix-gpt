@@ -41,9 +41,14 @@ install "npm i openai"
 creat openai and add key 
 call openai in gptsearchbar
 promise.all() -1.48
-responsive -1.05
 to keep sensitive data in .env, while using 
 memoization (if already data there dont call api)
+Get Open AI Api Key 
+Gpt Search API Call
+fetched gptMoviesSuggestions from TMDB
+created gptSlice added data
+Resused Movie List component to make movie suggestion container
+responsive -40.00
 
 
 
