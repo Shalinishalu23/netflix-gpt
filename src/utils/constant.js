@@ -8,8 +8,8 @@ export const USER_AVATAR =
     method: 'GET',
     headers: {
       accept: 'application/json',
-      // Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyZDFhMzhmYTNkNDMyYmJjNzkxMTA2Nzg2NjI3YmY5YiIsInN1YiI6IjY1YzM4YzRhOGUyZTAwMDE0OWE1MWZmNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.sp0RxM3jB-WBfciVCJoHrDknEr8gCrUqX3XKXheLCqM'
-      Authorization: 'Bearer'+ process.env.REACT_APP__TMDB_KEY
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyZDFhMzhmYTNkNDMyYmJjNzkxMTA2Nzg2NjI3YmY5YiIsInN1YiI6IjY1YzM4YzRhOGUyZTAwMDE0OWE1MWZmNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.sp0RxM3jB-WBfciVCJoHrDknEr8gCrUqX3XKXheLCqM'
+      // Authorization: 'Bearer'+ process.env.REACT_APP__TMDB_KEY
     }
   };
 
