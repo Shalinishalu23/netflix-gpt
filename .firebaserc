@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "netflixgpt-dc888"
-  }
+    "default": "shalininetflix-f3b40",
+    "shalininetflix": "shalininetflix-f3b40"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
