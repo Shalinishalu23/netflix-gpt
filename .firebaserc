@@ -1,9 +1,5 @@
 {
   "projects": {
-    "default": "shalininetflix-f3b40",
-    "shalininetflix": "shalininetflix-f3b40"
-  },
-  "targets": {},
-  "etags": {},
-  "dataconnectEmulatorConfig": {}
+    "default": "shalininetflix-f3b40"
+  }
 }
