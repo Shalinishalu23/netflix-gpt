@@ -1,5 +1,10 @@
 {
   "projects": {
-    "default": "shalininetflix-f3b40"
-  }
+    "default": "reactnetflix-9e311",
+    "shalinisnetflix": "shalininetflix-f3b40",
+    "netflix": "reactnetflix-9e311"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }

@@ -6,7 +6,7 @@ rafce shorthand
 Routing=> npm i -D react-router-dom,createBrowserRouter,RouterProvider
 header, login, sign up
 formik library for form validation, useRef 
-firebase => create project in firebase.google.com and config in app,npm install firebase,npm install -g firebase-tools, firebase login, firebase init(build choose), npm run build, firebase deploy (-1.55)
+firebase => create project in firebase.google.com and config in app,npm install firebase,npm install -g firebase-tools, firebase login/ firebase login --reauth,firebase use --add, firebase init(build choose), npm run build, firebase deploy (-1.55)
 Deploying our app to production
 Create SignUp User Account(firebase api call)
 Redux=> npm i -D @reduxjs/toolkit, npm i react-redux (-1.01)
@@ -67,7 +67,7 @@ NetflixGPT
     Search Bar
     Movie Suggestions
 
-    https://shalininetflix-f3b40.web.app/
+    https://reactnetflix-9e311.web.app/
     shalu.shalinigowda@gmail.com
     Shalu@2020
 
