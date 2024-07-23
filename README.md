@@ -1,4 +1,4 @@
-Create app "new create-react-app netflix-gpt"
+Create app "new create-react-app netplix-gpt"
 run "npm start"
 install tailwind
 create component/utils folders
@@ -63,11 +63,11 @@ Browse (after authentication)
         Title & Description
         MovieSuggestions
             MovieLists * N
-NetflixGPT
+NetplixGPT
     Search Bar
     Movie Suggestions
 
-    https://reactnetflix-9e311.web.app/
+   
     shalu.shalinigowda@gmail.com
     Shalu@2020
 
