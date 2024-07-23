@@ -104,8 +104,11 @@ const Login = () => {
                 </button>
                 <p className="py-4 cursor-pointer" onClick={toggleSignInForm}>
                     {isSignInForm
-                        ? "New to Netflix? Sign Up Now"
+                        ? "New to Cinephile ? Sign Up Now"
                         : "Already registered? Sign In Now."}
+                </p>
+                <p> If you don't want to signup then use email: admin@gmail.com and psw: Admin@2024 
+                   
                 </p>
             </form>
         </div>

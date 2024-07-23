@@ -67,7 +67,7 @@ NetplixGPT
     Search Bar
     Movie Suggestions
 
-   
+    https://shalinireact.netlify.app
     shalu.shalinigowda@gmail.com
     Shalu@2020
 

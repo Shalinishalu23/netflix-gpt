@@ -1,9 +1,6 @@
 {
   "projects": {
-    "default": "shalinicinephile",
-    "shalinisnetflix": "shalininetflix-f3b40",
-    "netflix": "reactnetflix-9e311",
-    "shalinicinephile": "shalinicinephile"
+    "default": "shalinicinephile"
   },
   "targets": {},
   "etags": {},
