@@ -107,9 +107,7 @@ const Login = () => {
                         ? "New to Cinephile ? Sign Up Now"
                         : "Already registered? Sign In Now."}
                 </p>
-                <p> If you don't want to signup then use email: admin@gmail.com and psw: Admin@2024 
-                   
-                </p>
+                <p className="text-red-500"> Guest login? email: admin@gmail.com and psw: Admin@2024</p>
             </form>
         </div>
     );
